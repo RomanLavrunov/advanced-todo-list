@@ -1,10 +1,10 @@
 import "./styles.css";
 import "./toggle.css";
 import React, { useEffect } from "react";
-import { SelectorButtonsContainer } from "../components/SelectorButtonsContainer";
-import { Filters } from "../components/Filters";
-import { TodoList } from "../components/TodoList";
-import { AddTodoElement } from "../components/AddTodoElement";
+import { SelectorButtonsContainer } from "./components/SelectorButtonsContainer";
+import { Filters } from "./components/Filters";
+import { TodoList } from "./components/TodoList";
+import { AddTodoElement } from "./components/AddTodoElement";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import {
   addTodo,
@@ -12,18 +12,18 @@ import {
   selectAllTodos,
   filterTodos,
   selectSortedTodos
-} from "../redux/todosSlice";
+} from "./redux/todosSlice";
 import {
   users,
   selectAllUsers,
   selectUser,
   activeUser
-} from "../redux/usersSlice";
-import { usedSource, selectSource } from "../redux/sourceSlice";
+} from "./redux/usersSlice";
+import { usedSource, selectSource } from "./redux/sourceSlice";
 import {
   completedState,
   selectCompletedState
-} from "../redux/completedFilterSlice";
+} from "./redux/completedFilterSlice";
 
 export default function App() {
   const dispatch = useDispatch();
